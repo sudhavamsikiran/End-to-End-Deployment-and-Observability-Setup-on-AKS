@@ -1,0 +1,2 @@
+# End-to-End-Deployment-and-Observability-Setup-on-AKS
+This repo outlines the architectural design, infrastructure setup, deployment strategies, security implementations, and monitoring solutions for an end-to-end infrastructure and deployment setup for an AI based application leveraging tasks IAC setup, CI CD setup using GitHub actions, Shift Left Security principles, Helm chart with AKS operations.  
