@@ -1,0 +1,23 @@
+replicaCount: 2
+image:
+  repository: Helm-Based-Deployment-in-AKS/ai-application
+  tag: latest
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 250m
+    memory: 256Mi
+hpa:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 80
+secrets:
+  useAzureKeyVault: true
+  kubernetesSecretName: mysecret
+monitoring:
+  openTelemetry:
+    enabled: true
+    endpoint: <your-open-telemetry-endpoint>
