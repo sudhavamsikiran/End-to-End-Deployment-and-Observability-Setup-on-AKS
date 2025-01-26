@@ -1,2 +1,13 @@
-# End-to-End-Deployment-and-Observability-Setup-on-AKS
-This repo outlines the architectural design, infrastructure setup, deployment strategies, security implementations, and monitoring solutions for an end-to-end infrastructure and deployment setup for an AI based application leveraging tasks IAC setup, CI CD setup using GitHub actions, Shift Left Security principles, Helm chart with AKS operations.  
+## Security Checks
+
+This repository implements Shift Left Security principles to ensure code security and integrity from the early stages of development. The following security checks are integrated into the GitHub Actions CI/CD pipeline:
+
+1. **Secret Scanning**: Scans the codebase for any exposed secrets.
+   - If secrets are detected, the pipeline will block deployment and fail the build.
+
+2. **Code Security Analysis**: Uses GitHub CodeQL to analyze the code for vulnerabilities.
+   - If vulnerabilities are detected, the pipeline will block deployment and fail the build.
+
+### Actions Taken if Vulnerabilities or Secrets are Detected:
+- The pipeline will automatically fail.
+- The developer is required to address the detected issues before a successful build and deployment can proceed.
